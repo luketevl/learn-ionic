@@ -3,6 +3,8 @@ Learn about Ionic 1
 
 # LINK
 - https://ionicframework.com
+- https://apps.ionic.io/login
+
 
 # ABOUT
 - Hybrid Mobile Framework
@@ -33,6 +35,17 @@ ionic serve
 ```shell
 ionic serve --lab
 ```
+
+# PUBLISH APP
+- Upload to apps ionic | to see is required use **ionic view**
+```shell
+ionic upload 
+```
+- Send to email link
+```shell
+ionic share email@email.com
+```
+
 
 # STRUCTURE
 - Folders
@@ -78,3 +91,4 @@ ionic serve --lab
   </ion-nav-bar>
 </ion-nav-view>
 ```
+- Publish your app for test in https://apps.ionic.io/login | to see is required use **ionic view**
