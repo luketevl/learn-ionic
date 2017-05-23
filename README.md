@@ -3,6 +3,8 @@ Learn about Ionic 1
 
 # LINK
 - https://ionicframework.com
+- https://apps.ionic.io/login
+
 
 # ABOUT
 - Hybrid Mobile Framework
@@ -34,6 +36,30 @@ ionic serve
 ionic serve --lab
 ```
 
+# PUBLISH APP
+- Upload to apps ionic | to see is required use **ionic view**
+```shell
+ionic upload
+```
+- Send to email link
+```shell
+ionic share email@email.com
+```
+
+# IONIC COMMANDS
+- **Add** _plataform_
+```shell
+ionic plataforms add android|ios
+```
+- **BUILD** app
+```shell
+ionic build android|ios
+```
+- **Run** build
+```shell
+ionic run android --device
+```
+
 # STRUCTURE
 - Folders
   - **www** | Have all files to create
@@ -58,7 +84,9 @@ ionic serve --lab
 angular.fromJson(json);
 ```
 
-# CLASSES
+# PLUGINS
+- **Camera**
+
 
 # COMPONENTS
 - **List**
@@ -67,6 +95,45 @@ angular.fromJson(json);
   <ion-item>Content</ion-item>
 </ion-list>
 ```
+- **Menu**
+```html
+<ion-side-menus>
+  <ion-side-menu-content>
+    <ion-nav-bar>
+      <ion-nav-buttons>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent">
+    </ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu>
+    <ion-content>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+```
+
+# Route
+- **Abstract** route
+  - set **abstract** _true_
+```javascript
+$stateProvider.state('app', {
+  url: '/app',
+  templateUrl: 'templates/menu.html',
+  abstract: true
+})
+
+.state('app.list', {
+  url: '/list',
+  views: {
+    'menuContent': {
+      templateUrl,
+      controller
+  }
+  }
+})
+ ```
+
 
 # OBSERVATIONS
 - To **show** HTML is **required** **CONTENT TAG**
@@ -94,3 +161,8 @@ angular.module(moduleName).controller(controllerName, function($stateParams, $sc
   $scope.whatever = angular.Json($stateParams.paramNameDefinedInRoute);
   });
 ```
+- Publish your app for test in https://apps.ionic.io/login | to see is required use **ionic view**
+- In **abstract** _routes_ you hae change other routes
+-  **BUILD** in **ios** only works in **MAC**, use xcode
+  - open xcode and _assign_ app
+  - Open the preferences in your iphone and added developer
