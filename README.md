@@ -4,11 +4,13 @@ Learn about Ionic 1
 # LINK
 - https://ionicframework.com
 - https://apps.ionic.io/login
-
+- https://market.ionic.io/
 
 # ABOUT
 - Hybrid Mobile Framework
 - Use **angular**
+- Use the **webview**
+
 
 # INSTALL
 - Run the command to INSTALL
@@ -83,9 +85,47 @@ ionic run android --device
 ```javascript
 angular.fromJson(json);
 ```
+- _Disable_ back button
+```javascript
+$ionicHistory.nextViewOptions({disabledBack: true});
+```
+
+# DATABASES
+
+## LocalStorage
+- (key, value) | Used to basic datas(tokens)
+- Native
+
+## WebSQL
+- Native
+- **Open connection**
+```javascript
+const connection = window.openDatabase('databaseName', 'version', 'description', size);
+```
+- **Create transaction**
+  - **executeSql** command sql**
+  - **[]** params in commandoSQL
+```javascript
+connection().transaction((transaction) => {
+  transaction.executeSql('commandoSQL', []);
+})
+```
+-
+
+## SQLite
+- Not native, necessary install plugin
 
 # PLUGINS
-- **Camera**
+
+- **NgCodorva** | Used to use natives resources in smartphone(camera, gps, vibracall)
+```shell
+bower install ngCordova
+```
+  - Camera
+```shell
+cordova pugin add cordova-plugin-camera
+```
+
 
 
 # COMPONENTS
@@ -166,3 +206,6 @@ angular.module(moduleName).controller(controllerName, function($stateParams, $sc
 -  **BUILD** in **ios** only works in **MAC**, use xcode
   - open xcode and _assign_ app
   - Open the preferences in your iphone and added developer
+- **Create database** in _method_ **run** in app.js
+- **DATABASES**
+  - **IMPORTANT** **ever** use **CREATE IF NOT EXISTS**
