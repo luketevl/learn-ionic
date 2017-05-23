@@ -41,7 +41,7 @@ ionic serve --lab
 
 # VIEWS
 - Create view
-  - **>ion-view** is **required**, if you don't use this the elements on elements
+  - **<ion-view>** is **required**, if you don't use this the elements on elements
 ```html
 <ion-view>
 </ion-view>
@@ -50,6 +50,12 @@ ionic serve --lab
 - Create **back button** for transitions
 ```html
 <ion-nav-back-button></ion-nav-back-button>
+```
+
+# FUNCTIONS
+- _Objects_ between **views** is a **STRING** ! CONVERT to object
+```javascript
+angular.fromJson(json);
 ```
 
 # CLASSES
@@ -77,4 +83,14 @@ ionic serve --lab
     <ion-nav-back-button></ion-nav-back-button>
   </ion-nav-bar>
 </ion-nav-view>
+```
+- When send _object_ between **views** is a **STRING** ! CONVERT to object
+```javascript
+angular.fromJson(json);
+```
+- _Received_ **params in CONTROLLER**
+```javascript
+angular.module(moduleName).controller(controllerName, function($stateParams, $scope){
+  $scope.whatever = angular.Json($stateParams.paramNameDefinedInRoute);
+  });
 ```
