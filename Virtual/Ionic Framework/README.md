@@ -80,7 +80,11 @@ ionic platform list
 ```
 > Permite tratar **respostas ASSÍNCRONAS** por meio de funções de **RESOLUÇÃO(resolve)** e de **REJEIÇÃO(rejection)**.
 
-
+#### Como funciona ?
+- Você faz um ajax
+  - Cria um metodo que rodar depois que executar
+  - Pode ser de sucesso ou de erro
+  - Então faz alguma coisa
 
 ### HTTP
 - Para fazer requisições e necessário importar e chama-lo no construtor
