@@ -78,7 +78,7 @@ ionic platform list
       console.log(erro);
     })
 ```
-> Permite tratar **respostas ASSÍNCRONAS** por meio de funções de **RESOLUÇÃO(resolve)** e de **REJEIÇÃO(rejection)**.
+> Permite tratar **respostas ASSÍNCRONAS** por meio de funções de **RESOLUÇÃO(resolve)** e de **REJEIÇÃO(reject)**.
 
 #### Como funciona ?
 - Você faz um ajax
@@ -91,7 +91,7 @@ ionic platform list
 ```js
 import { Http } from '@angular/http';
 
-constructor(public: http : Http){}
+constructor(public http : Http){}
 ```
 - Busca um recurso
 ```js
